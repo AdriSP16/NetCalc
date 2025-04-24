@@ -81,7 +81,7 @@ python cli.py --ip Ip_para_analizar --mascara Mascara_red
 ### Con exportación a JSON
 
 ```bash
-python cli.py --ip 10.0.0.1 --mascara /16 --json
+python cli.py --ip Ip_para_analizar --mascara mascara_red --json
 ```
 
 ### Opciones disponibles
@@ -138,7 +138,11 @@ netcalc/
 ## 💡 Ejemplo de uso (CLI)
 
 ```bash
-python app.py --ip 192.168.0.1 --mascara 255.255.255.0 --json
+python cli.py --ip 192.168.0.1 --mascara 255.255.255.0
+```
+
+```bash
+python cli.py --ip 10.0.0.1 --mascara 16 --json
 ```
 
 📝 Esto mostrará en consola los detalles de red y generará el archivo `resultadoNetCalc.json`.
