@@ -33,7 +33,7 @@ Con **NetCalc**, puedes obtener de forma rápida y visual la dirección de red, 
 ### Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/netcalc.git
+git clone https://github.com/AdriSP16/NetCalc.git
 cd netcalc
 ```
 
