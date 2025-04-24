@@ -1,7 +1,7 @@
 import os
 import json
 import argparse
-from colorama import Fore, Style, init
+from colorama import Fore, Style, init # type: ignore
 from network_utils import calcular_red
 
 # Inicializamos colorama para que funcione en Windows

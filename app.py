@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, make_response, redirect, url_for, jsonify
-import os
+from flask import Flask, render_template, request, make_response, redirect, url_for, jsonify  # type: ignore
 from network_utils import calcular_red
 import json
 
