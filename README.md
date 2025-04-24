@@ -58,7 +58,7 @@ python app.py
 
 Esto iniciará la aplicación en:
 
-```
+```bash
 http://127.0.0.1:5000
 ```
 
