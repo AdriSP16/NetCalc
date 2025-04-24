@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calculadora de Red</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
-        <h1>Calculadora de Red</h1>
-        <form action="/calcular" method="POST">
-            <label>IP:</label>
-            <input type="text" name="ip" required>
-            <label>Máscara (CIDR o decimal):</label>
-            <input type="text" name="mascara">
-            <label><input type="checkbox" name="json"> ¿Exportar como JSON?</label>
-            <button type="submit">Calcular</button>
-        </form>
-    </body>
+<head>
+    <title>NetCalc</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Calculadora de Red</h1>
+
+    {% if error %}
+        <div style="background-color: #fdd; color: #900; padding: 10px; margin-bottom: 20px; border: 1px solid #900; border-radius: 6px;">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <form action="/calcular" method="POST">
+        <label>IP:</label>
+        <input type="text" name="ip" required>
+        <label>Máscara (CIDR o decimal):</label>
+        <input type="text" name="mascara">
+        <label><input type="checkbox" name="json"> ¿Exportar como JSON?</label>
+        <button type="submit">Calcular</button>
+    </form>
+
+</body>
 </html>

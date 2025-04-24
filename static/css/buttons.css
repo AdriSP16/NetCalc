@@ -1,0 +1,14 @@
+/* buttons.css - Estilos para los botones */
+button {
+    padding: 10px;
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1e5d91;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Descargando JSON...</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="{{ url_for('static', filename='js/download.js') }}"></script>  <!-- Enlace al archivo JS externo -->
+    </head>
+    <body class="download-body">
+        <h1 class="title">Generando archivo JSON y redirigiendo...</h1>
+
+        <!-- Este div contendrá el resultado en formato JSON que el JS podrá utilizar -->
+        <div id="resultadoData" style="display:none;">{{ resultado | tojson }}</div>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+/* links.css - Estilos para los enlaces */
+a {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #0a3d62;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1e5d91;
+}

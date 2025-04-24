@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Resultado</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <h2>Resultado del cálculo:</h2>
-        <ul>
-            {% for key, value in resultado.items() %}
-                <li><strong>{{ key }}:</strong> {{ value }}</li>
-            {% endfor %}
-        </ul>
-        <a href="/">Volver</a>
+        <div class="container">
+            <h2>Resultado del cálculo:</h2>
+
+            {% if resultado %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for key, value in resultado.items() %}
+                            <tr>
+                                <td><strong>{{ key }}:</strong></td>
+                                <td>{{ value }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No se pudo obtener el resultado. Regresa al <a href="{{ url_for('index') }}">inicio</a>.</p>
+            {% endif %}
+
+            <a href="/">Volver</a>
+        </div>
     </body>
 </html>
-
