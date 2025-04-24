@@ -75,7 +75,7 @@ http://127.0.0.1:5000
 ### Sintaxis básica
 
 ```bash
-python cli.py --ip 192.168.1.1 --mascara 255.255.255.0
+python cli.py --ip Ip para analizar --mascara Mascara de red
 ```
 
 ### Con exportación a JSON
