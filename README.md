@@ -75,7 +75,7 @@ http://127.0.0.1:5000
 ### Sintaxis básica
 
 ```bash
-python cli.py --ip Ip para analizar --mascara Mascara de red
+python cli.py --ip Ip_para_analizar --mascara Mascara_red
 ```
 
 ### Con exportación a JSON
