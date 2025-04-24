@@ -151,7 +151,13 @@ python cli.py --ip 10.0.0.1 --mascara 16 --json
 
 ## 🧪 Ejemplo de uso (Web)
 
-Accede a `http://localhost:5000`.
+En la carpeta de NetCalc:
+
+```bash
+python app.py
+```
+
+Luego, en el navegador, accede a `http://localhost:5000`.
 
 Introduce:
 
@@ -184,6 +190,6 @@ Este proyecto está licenciado bajo la [Licencia Creative Commons Atribución-No
 
 ## 📫 Contacto
 
-¿Tienes dudas o sugerencias? Puedes contactarme vía GitHub o dejar una Issue en el repositorio.
+¿Tienes dudas o sugerencias? Puedes contactarme vía GitHub o dejar una Issue en el repositorio, cualquier FeedBack es bienvenido.
 
 ¡Gracias por usar NetCalc! 🎉
