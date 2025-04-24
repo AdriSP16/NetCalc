@@ -27,14 +27,17 @@ Con **NetCalc**, puedes obtener de forma rápida y visual la dirección de red, 
 
 - Python 3.6 o superior
 - pip (gestor de paquetes de Python)
-- Flask
-- Colorama
+
+### Dependencias y librerias
+
+- Flask 2.3.2
+- Colorama 0.4.4
 
 ### Clonar el repositorio
 
 ```bash
 git clone https://github.com/AdriSP16/NetCalc.git
-cd netcalc
+cd NetCalc
 ```
 
 ### Instalar dependencias
@@ -50,7 +53,7 @@ pip install -r requirements.txt
 ### Iniciar el servidor Flask
 
 ```bash
-python app.py --flask
+python app.py
 ```
 
 Esto iniciará la aplicación en:
@@ -101,13 +104,13 @@ netcalc/
 ├── network_utils.py      # Lógica de cálculo
 ├── requirements.txt
 │
-├── templates/            # HTML
+├── templates/            # HTML5
 │   ├── index.html
 │   ├── result.html
 │   └── download_redirect.html
 │
 ├── static/
-│   ├── css/
+│   ├── css/              # CSS3
 │   │   ├── base.css
 │   │   ├── buttons.css
 │   │   ├── download.css
@@ -116,7 +119,7 @@ netcalc/
 │   │   ├── reset.css
 │   │   ├── style.css
 │   │   └── tables.css
-│   └── js/
+│   └── js/               # JS
 │       └── download.js
 ```
 
