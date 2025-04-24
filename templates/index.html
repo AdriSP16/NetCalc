@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de Red</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Calculadora de Red</h1>
+        <form action="/calcular" method="POST">
+            <label>IP:</label>
+            <input type="text" name="ip" required>
+            <label>Máscara (CIDR o decimal):</label>
+            <input type="text" name="mascara">
+            <label><input type="checkbox" name="json"> ¿Exportar como JSON?</label>
+            <button type="submit">Calcular</button>
+        </form>
+    </body>
+</html>
