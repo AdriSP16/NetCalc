@@ -1,13 +1,21 @@
 from flask import Flask, render_template, request, make_response, redirect, url_for, jsonify # type: ignore
+import os
 from network_utils import calcular_red
 import json
 import argparse
-from colorama import Fore, Style, init
+from colorama import Fore, Style, init # type: ignore
 
 # Inicializamos colorama para que funcione en Windows
 init(autoreset=True)
 
 app = Flask(__name__)
+
+def get_download_path():
+    """Devuelve la ruta a la carpeta de Descargas del usuario."""
+    if os.name == 'nt':  # Windows
+        return os.path.join(os.environ['USERPROFILE'], 'Downloads')
+    else:  # Linux, macOS
+        return os.path.join(os.path.expanduser('~'), 'Downloads')
 
 @app.route("/", methods=["GET"])
 def index():
@@ -57,14 +65,17 @@ def run_cli(ip, mascara, export_json):
 
         print(f"{Fore.CYAN}Iniciando el cálculo para IP: {ip} y Máscara: {mascara}...{Style.RESET_ALL}")
         resultado = calcular_red(ip, mascara)
-        
+
         if export_json:
-            # Si se requiere exportar como JSON, guardamos el archivo
-            with open('resultado_red.json', 'w') as f:
+            # Guardamos el resultado en la carpeta de Descargas
+            download_path = get_download_path()
+            json_path = os.path.join(download_path, 'resultadoNetCalc.json')
+
+            with open(json_path, 'w') as f:
                 json.dump(resultado, f, indent=4)
-            print(f"{Fore.GREEN}Archivo JSON generado: resultado_red.json{Style.RESET_ALL}")
+
+            print(f"{Fore.GREEN}Archivo JSON generado en: {json_path}{Style.RESET_ALL}")
         else:
-            # Solo mostramos el resultado en la terminal
             print(f"{Fore.YELLOW}Resultado:{Style.RESET_ALL}")
             print(json.dumps(resultado, indent=4))
 
